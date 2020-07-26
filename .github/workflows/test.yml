@@ -1,0 +1,21 @@
+name: Test MiraiOK
+
+on:
+  push:
+    branches:
+      - dev
+  workflow_dispatch:
+
+jobs:
+  test-send-message:
+    name: Test Send Message
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Test
+        env:
+          VERSION: '0.0.1-alpha'
+        run: |
+          ./run.sh "${{ secrets.BOT_INFO }}" "${{ secrets.TEST_GROUP }}" "${{ secrets.TEST_MESSAGE }}"
