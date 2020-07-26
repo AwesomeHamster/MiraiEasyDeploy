@@ -21,3 +21,7 @@ fi
 
 # create config.txt
 echo -e "----------\nlogin $1\nsay $2 $3" > config.txt
+
+# run MiraiOK
+chmod +x ./MiraiOK
+./MiraiOK

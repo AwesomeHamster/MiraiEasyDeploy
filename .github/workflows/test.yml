@@ -18,4 +18,5 @@ jobs:
         env:
           VERSION: '0.0.1-alpha'
         run: |
+          sudo chmod +x ./run.sh
           ./run.sh "${{ secrets.BOT_INFO }}" "${{ secrets.TEST_GROUP }}" "${{ secrets.TEST_MESSAGE }}"
