@@ -8,6 +8,7 @@ on:
 
 jobs:
   test-send-message:
+    if: false # temporary stopping this workflow
     name: Test Send Message
     runs-on: ubuntu-latest
     steps:
