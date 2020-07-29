@@ -35,11 +35,11 @@ touch .env
 
 ```bash
 # .env
-# qq id and password / qq号和密码
+# (required / 必要变量) qq id and password / qq号和密码
 MIRAI_BOT_INFO="111111 password"
-# test message when start success / 启动成功后发送测试信息
+# (optional / 可选变量) test message when start success / 启动成功后发送测试信息
 MIRAI_TEST_MESSAGE="test message"
-# test message target (can be qq or group) / 测试信息的目标qq号或群号
+# (optional / 可选变量)  test message target (can be qq or group) / 测试信息的目标qq号或群号
 MIRAI_TEST_TARGET="123456789"
 ```
 
@@ -49,6 +49,12 @@ MIRAI_TEST_TARGET="123456789"
 ```bash
 docker-compose up -d
 ```
+
+_You can create a container with your own configuration too,_
+_just modify `docker-compose.yml` or directly use `docker` command._
+
+_You must pass all the required environment variable in `base.env` and mentioned above._
+
 
 - if necessary, print logs to verify your bot qq
 - 有时候可能会被风控，需要输出日志解除设备锁等
