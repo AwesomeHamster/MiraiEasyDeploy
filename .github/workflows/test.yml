@@ -14,9 +14,15 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Test
-        env:
-          VERSION: '0.0.1-alpha'
-        run: |
-          sudo chmod +x ./run.sh
-          ./run.sh "${{ secrets.BOT_INFO }}" "${{ secrets.TEST_GROUP }}" "${{ secrets.TEST_MESSAGE }}"
+      - name: deploy to remote server
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.SERVER_IP }}
+          username: ${{ secrets.SERVER_USERNAME }}
+          password: ${{ secrets.SERVER_PASSWORD }}
+          port: 22
+          script: |
+            cd "${{ secrets.REPO_PATH }}"
+            git fetch --all
+            git reset --hard origin/dev
+            sudo docker-compose up -d --build --force-recreate
