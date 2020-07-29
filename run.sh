@@ -18,7 +18,7 @@ then
 fi
 
 # create config.txt
-echo -e "----------\nlogin ${BOT_INFO}\nsay ${TEST_GROUP} ${TEST_MESSAGE}" > config.txt
+echo -e "----------\nlogin ${MIRAI_BOT_INFO}\nsay ${MIRAI_TEST_GROUP} ${MIRAI_TEST_MESSAGE}" > config.txt
 
 # run MiraiOK
 chmod +x ./MiraiOK
