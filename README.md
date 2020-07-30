@@ -4,7 +4,7 @@ A too young too simple runner of [MiraiOK](https://github.com/LXY1226/MiraiOK), 
 
 [MiraiOK](https://github.com/LXY1226/MiraiOK)的又一层套娃，使其更容易部署到云服务器上。
 
-# Prerequirement 要求
+# Prerequisite 要求
 
 - Docker
 - Docker Compose
