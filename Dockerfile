@@ -23,10 +23,10 @@ RUN apt-get update \
     && locale-gen \
     && update-locale LANG=zh_CN.UTF-8
 
-RUN wget -c "${MIRAI_DOWNLOAD_URL}" -O MiraiOK \
+RUN wget -q -c "$MIRAI_DOWNLOAD_URL" -O MiraiOK \
     && mkdir -p plugins \
-    && wget -c "${MIRAI_API_HTTP_DOWNLOAD_URL}" -O plugins/mirai-api-http.jar \
-    && wget -c "${MIRAI_CQHTTP_MIRAI_URL}" -O plugins/cqhttp-mirai.jar \
+    && wget -q -c "$MIRAI_API_HTTP_DOWNLOAD_URL" -O plugins/mirai-api-http.jar \
+    && wget -q -c "$MIRAI_CQHTTP_MIRAI_URL" -O plugins/cqhttp-mirai.jar \
     && chmod +x ./MiraiOK
 
 CMD ./MiraiOK
