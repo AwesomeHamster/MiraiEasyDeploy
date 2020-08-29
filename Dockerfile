@@ -18,3 +18,11 @@ RUN apt-get update \
     && sed -i -E 's/# (zh_CN.UTF-8)/\1/' /etc/locale.gen \
     && locale-gen \
     && update-locale LANG=zh_CN.UTF-8
+
+RUN wget -c "${MIRAI_DOWNLOAD_URL}" -O MiraiOK \
+    && mkdir -p plugins \
+    && wget -c "${MIRAI_API_HTTP_DOWNLOAD_URL}" -O plugins/mirai-api-http.jar \
+    && wget -c "${MIRAI_CQHTTP_MIRAI_URL}" -O plugins/cqhttp-mirai.jar \
+    # add mirai config
+    && echo -e "----------\nlogin ${MIRAI_BOT_INFO}" > config.txt \
+    && chmod +x ./MiraiOK

@@ -11,4 +11,4 @@ services:
       - ".:/workspace/mirai"
     working_dir: "/workspace/mirai"
     network_mode: bridge
-    command: [ "./run.sh" ]
+    command: [ "./MiraiOK" ]
