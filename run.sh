@@ -25,13 +25,13 @@ fi
 # create config.txt
 if [[ -z ${MIRAI_BOT_INFO} ]]
 then
-    echo -e "----------\nlogin ${MIRAI_BOT_INFO}" > config.txt
-else
     echo "no environment variable MIRAI_BOT_INFO defined, exiting..."
     exit 1
+else
+    echo -e "----------\nlogin ${MIRAI_BOT_INFO}" > config.txt
 fi
 
-if [[ -z ${MIRAI_TEST_GROUP} && ${MIRAI_TEST_MESSAGE} ]]
+if [[ (! -z ${MIRAI_TEST_GROUP}) && (! -z ${MIRAI_TEST_MESSAGE}) ]]
 then
     echo "say ${MIRAI_TEST_GROUP} ${MIRAI_TEST_MESSAGE}" >> config.txt
 fi
