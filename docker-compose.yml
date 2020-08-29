@@ -10,5 +10,5 @@ services:
     volumes: 
       - ".:/workspace/mirai"
     working_dir: "/workspace/mirai"
-    network_mode: "bridge"
+    network_mode: bridge
     command: [ "./run.sh" ]
