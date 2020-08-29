@@ -5,8 +5,8 @@ services:
     build: "."
     container_name: mirai_v1
     env_file:
-      - "./base.env"
-      - "./.env"
+      - "base.env"
+      - ".env"
     volumes: 
       - ".:/workspace/mirai"
     working_dir: "/workspace/mirai"
