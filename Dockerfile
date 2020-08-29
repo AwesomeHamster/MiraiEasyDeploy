@@ -28,3 +28,5 @@ RUN wget -c "${MIRAI_DOWNLOAD_URL}" -O MiraiOK \
     && wget -c "${MIRAI_API_HTTP_DOWNLOAD_URL}" -O plugins/mirai-api-http.jar \
     && wget -c "${MIRAI_CQHTTP_MIRAI_URL}" -O plugins/cqhttp-mirai.jar \
     && chmod +x ./MiraiOK
+
+CMD ./MiraiOK
