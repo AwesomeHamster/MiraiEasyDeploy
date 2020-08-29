@@ -17,6 +17,11 @@ then
     wget -c ${MIRAI_API_HTTP_DOWNLOAD_URL} -O plugins/mirai-api-http.jar
 fi
 
+if [ ! -e "plugins/cqhttp-mirai.jar" ]
+then
+    wget -c ${MIRAI_CQHTTP_MIRAI_URL} -O plugins/cqhttp-mirai.jar
+fi
+
 # create config.txt
 if [[ -z ${MIRAI_BOT_INFO} ]]
 then
