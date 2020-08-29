@@ -1,5 +1,9 @@
 FROM debian:buster
 
+ARG MIRAI_DOWNLOAD_URL
+ARG MIRAI_API_HTTP_DOWNLOAD_URL
+ARG MIRAI_CQHTTP_MIRAI_URL
+
 # set tsinghua tuna debian mirror server
 # uncomment it in mainland china
 # RUN mv /etc/apt/sources.list /etc/apt/sources.list.backup \
