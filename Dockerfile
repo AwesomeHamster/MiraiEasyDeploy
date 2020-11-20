@@ -1,4 +1,4 @@
-FROM debian:buster
+FROM openjdk:14-alpine
 
 # set lacale as zh-cn
 ENV LANG=zh_CN.UTF-8
@@ -9,6 +9,8 @@ RUN apt-get update \
     # update locale
     && sed -i -E 's/# (zh_CN.UTF-8)/\1/' /etc/locale.gen \
     && locale-gen \
-    && update-locale LANG=zh_CN.UTF-8
+    && update-locale LANG=zh_CN.UTF-8 \
+    # download onebot kotlin
+    && wget -q -c "https://github.com/yyuueexxiinngg/onebot-kotlin/releases/download/0.3.0/onebot-kotlin-0.3.0-all.jar" -O plugins/onebot-kotlin-all.jar
 
-CMD ["java", "--version"]
+CMD ["java", "-jar", "onebot-kotlin-all.jar"]

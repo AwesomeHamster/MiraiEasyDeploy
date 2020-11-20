@@ -1,2 +1,10 @@
 # Mirai configuration files
 config/
+data/
+
+# Logs
+logs/
+/device.json
+
+# Executable
+onebot-kotlin-*.jar
