@@ -1,14 +1,2 @@
-# would be download by bootstrap script
-/MiraiOK*
-/config.txt
-/.env
-#
-# Mirai / MiraiOK running files
-content/
-jre/
-log/
-plugins/
-.lastupdate
-bot.yml
-device.json
-mirai-console-wrapper*
+# Mirai configuration files
+config/

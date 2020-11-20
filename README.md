@@ -1,20 +1,25 @@
-# MiraiOK Runner
+# MiraiEasyDeploy
 
-A too young too simple runner of [MiraiOK](https://github.com/LXY1226/MiraiOK), to make it easier to deploy onto server.
+This repo wraps [OneBot Mirai](https://github.com/yyuueexxiinngg/onebot-kotlin), make it easier to deploy onto server.
 
-[MiraiOK](https://github.com/LXY1226/MiraiOK)的又一层套娃，使其更容易部署到云服务器上。
+此項目使用Docker對[OneBot Mirai](https://github.com/yyuueexxiinngg/onebot-kotlin)項目進行了封裝，使其更容易部署至伺服器。
 
-# Prerequisite 要求
+## Prerequisite 要求
 
 - Docker
 - Docker Compose
 
-_if you don't have Docker or Docker Compose on your computer, install it first. [Learn More](https://docs.docker.com/get-started/)_
+## How to use 如何使用
 
-_如果你还没安装Docker，需要先安装。[入门教程](https://docs.docker.com/get-started/)_
+- make sure that you have Docker and Docker Compose installed / 請確保您已經安裝了Docker和Docker Compose
 
-# How to use 如何使用
+    check docker and docker-compose with commands below
 
-**Do It Yourself**
+    使用下方的命令檢查docker和docker-compose是否安裝
 
-**自己想**
+    ```bash
+    $ docker --version
+    Docker version 19.03.13, build 4484c46d9d
+    $ docker-compose --version
+    docker-compose version 1.27.4, build 40524192
+    ```
