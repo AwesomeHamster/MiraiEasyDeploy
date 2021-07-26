@@ -11,6 +11,6 @@ RUN apt-get update \
     && locale-gen \
     && update-locale LANG=zh_CN.UTF-8 \
     # download onebot kotlin
-    && wget -q -c "https://github.com/yyuueexxiinngg/onebot-kotlin/releases/download/0.3.0/onebot-kotlin-0.3.0-all.jar" -O plugins/onebot-kotlin-all.jar
+    && wget -q -c "https://github.com/yyuueexxiinngg/onebot-kotlin/releases/download/0.3.4/onebot-kotlin-0.3.4-all.jar" -O plugins/onebot-kotlin-all.jar
 
 CMD ["java", "-jar", "onebot-kotlin-all.jar"]
